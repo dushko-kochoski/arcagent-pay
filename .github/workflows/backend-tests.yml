@@ -28,7 +28,9 @@ jobs:
         with:
           node-version: "22"
           cache: npm
-          cache-dependency-path: contracts/package-lock.json
+          cache-dependency-path: |
+            contracts/package-lock.json
+            frontend/package-lock.json
 
       - name: Install contract dependencies
         working-directory: contracts
@@ -41,6 +43,14 @@ jobs:
       - name: Run contract tests
         working-directory: contracts
         run: npx hardhat test
+
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Build frontend
+        working-directory: frontend
+        run: npm run build
 
       - name: Set up Python
         uses: actions/setup-python@v5
