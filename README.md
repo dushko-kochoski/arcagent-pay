@@ -1,5 +1,7 @@
 # ArcAgent Pay
 
+[![Backend Tests](https://github.com/dushko-kochoski/arcagent-pay/actions/workflows/backend-tests.yml/badge.svg)](https://github.com/dushko-kochoski/arcagent-pay/actions/workflows/backend-tests.yml)
+
 On-chain USDC spending controls for autonomous AI agents on Arc.
 
 ArcAgent Pay lets an AI agent decide when it wants to request a payment while an `ArcAgentVault` smart contract remains the final authority over whether that payment is allowed.
