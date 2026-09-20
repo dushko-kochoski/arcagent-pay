@@ -38,6 +38,10 @@ jobs:
         working-directory: contracts
         run: npx hardhat compile
 
+      - name: Run contract tests
+        working-directory: contracts
+        run: npx hardhat test
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
